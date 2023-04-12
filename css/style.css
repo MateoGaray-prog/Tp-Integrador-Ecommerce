@@ -1,0 +1,243 @@
+/*------------------------------------ESTILOS GENERALES-------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+h2 {
+    color: #278fa1;
+}
+
+img {
+    max-width: 150px;
+    max-height: 150px;
+}
+/*----------------------------------------HEADER------------------------------------------*/
+
+.nav {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h1{
+    color: #000;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    margin: 0 10px 0 60px;
+}
+
+.menu {
+    display: flex;
+    margin-right: 50px;
+}
+
+.menu li{
+    margin: 20px;
+}
+
+.menu li a{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: 'Heebo', sans-serif;
+}
+
+.menu li a:hover {
+    padding: 5px 10px;
+    background-color: #278fa1;
+    color: #fff;
+    border-radius: 15px;
+}
+
+/*-----------------------------------------SECTION HOME-----------------------------------*/
+
+#home {
+    background-image: url(../Imagenes/fondo.jpg);  
+    background-size: cover;
+    background-position: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 50px;
+    color: #fff;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+#home p {
+    max-width: 800px;
+    color: #fff;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+/*--------------------------------------Seccion Remeras---------------------------*/
+
+#remeras{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.remeras-encabezado {
+    font-size: 40px;
+    color: #278fa1;
+    margin-bottom: 100px;
+}
+
+.remeras-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.remera-1 img{
+    width: 200px;
+    height: 200px;
+}
+
+.remera-2 img{
+    width: 200px;
+    height: 200px;
+}
+
+.remera-3 img{
+    width: 200px;
+    height: 200px;
+}
+
+.precio-producto {
+    font-size: 25px;
+}
+
+/*-----------------------------------Seccion Pantalones -----------------------------*/
+
+#pantalones{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pantalones-encabezado {
+    font-size: 40px;
+    color: #278fa1;
+    margin-bottom: 100px;
+}
+
+.pantalones-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pantalon-1 img{
+    width: 200px;
+    height: 200px;
+}
+
+.pantalon-2 img{
+    width: 200px;
+    height: 200px;
+}
+
+.pantalon-3 img{
+    width: 200px;
+    height: 200px;
+}
+
+/*--------------------------------Section Zapatillas-----------------------------*/
+
+#zapatillas{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.zapatillas-encabezado {
+    font-size: 40px;
+    color: #278fa1;
+    margin-bottom: 100px;
+}
+
+.zapatillas-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.zapatilla-1 img{
+    width: 200px;
+    height: 200px;
+}
+
+.zapatilla-2 img{
+    width: 200px;
+    height: 200px;
+}
+
+.zapatilla-3 img{
+    width: 200px;
+    height: 200px;
+}
+
+
+/*-------------------------------------------GENERAL----------------------------*/
+
+.producto-agregar {
+    border: 0;
+    cursor: pointer;
+    background-color: #278fa1;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: 400;
+}

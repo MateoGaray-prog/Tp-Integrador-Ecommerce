@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-carrito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Tp-Integrador</title>
+    <script defer src="./js/carrito.js"></script>
+    <title>Document</title>
+</head>
+<body id="body">
+    <header id="header">
+
+        <div class="nav">
+            <nav class="logo">
+                <img src="/Imagenes/logo2.jpg" alt="Logo">
+                <h1>Nombre <br> Empresa</h1>
+            </nav>
+            <ul class="menu">
+                <li>
+                    <a class="active" href="index.html">Seguir Comprando</a>
+                </li>
+                <li>
+                    <i class="bi bi-cart-fill"></i>                 
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="titulo-carrito" class="titulo-carrito ">
+            <h1>Carrito</h1>
+        </div>
+        <div id="contenedor-carrito" class="contenedor-carrito">
+            <div id="carrito-vacio" class="carrito-vacio-container">
+                <p class="carrito-vacio " >Tu carrito está vacio <i class="bi bi-emoji-frown"></i></p>
+            </div>
+
+            <div id="carrito-productos" class="carrito-productos disabled">
+                
+            </div>
+
+            <div id="carrito-acciones" class="carrito-acciones disabled">
+                <div class="carrito-acciones-izquierda">
+                    <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar"> VACIAR CARRITO</button>
+                </div>
+                <div class="carrito-acciones-derecha">
+                    <div class="carrito-acciones-total">
+                        <p>TOTAL: </p>
+                        <p id="total"></p>
+                    </div>
+                    <button id="carrito-acciones-comprar"> Comprar Ahora </button>
+                </div>
+            </div>
+            <div id="carrito-comprado" class="carrito-comprado-container disabled">
+                <p class="carrito-comprado">Muchas gracias por su compra<i class="bi bi-emoji-laughing"></i></p>
+            </div>    
+        </div>
+        <div class="wizard-container">
+            <div id="wizard-1" class="wizard-1 disabled">
+                <h1>COMPRA</h1>
+                <form class="wizard-1-form" action="">
+                    <p>
+                        <label>Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </p>
+                    <p>
+                        <label>Apellido</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </p>
+                    <p>
+                        <label>Celular</label>
+                        <input type="tel" id="celular" required>
+                    </p>
+                    <p>
+                        <label>E-Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p >
+                        <button id="boton-cancelar" type="submit">Cancelar</button>
+                    </p>
+                    <p >
+                        <button id="boton-siguiente" type="submit">Siguiente</button>
+                    </p>
+                </form>
+                <p id="alerta-formulario" class="alerta-formulario disabled"> Debes completar el formulario!</p>
+            </div>
+            <div id="wizard-2" class="wizard-2 disabled">
+                <h1>COMPRA</h1>
+                <form class="wizard-2-form" action="">
+                    <div id="spinner" class="spinner disabled">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                      </div>
+                    <p>
+                        <label id="texto-correo">Te enviaremos un correo luego de confirmar la compra.</label>
+                    </p>
+                    <p>
+                        <button id="boton-atras" type="submit">Atras</button>
+                    </p>
+                    <p>
+                        <button id="boton-confirmar-compra" type="submit">Confirmar compra</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
