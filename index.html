@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script src="https://kit.fontawesome.com/9685564a41.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=PT+Sans&display=swap" rel="stylesheet">
@@ -80,6 +79,7 @@
                 </div>
             </div>
         </section>
+        <hr>
         <section id="pantalones">
             <p class="pantalones-encabezado">Pantalones</p>
             <div class="pantalones-contenedor">
@@ -109,6 +109,7 @@
                 </div>
             </div>
         </section>
+        <hr>
         <section id="zapatillas"> 
             <p class="zapatillas-encabezado">Zapatillas</p>
             <div class="zapatillas-contenedor">
@@ -138,5 +139,124 @@
                 </div>
             </div>
         </section>
+        <section id="contacto">
+            <div class="div-contacto-1">
+                <div>
+                    <h2>Síguenos</h2>
+                    <br>
+                    <div class="div-redes-contacto">
+                        <ul>
+                            <li class="contenedor-redes"> 
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="bi bi-facebook">  </i>
+                                </a>
+                                <p>
+                                    FaceBook
+                                </p>
+                            </li>
+                            <li class="contenedor-redes"> 
+                                <a href="https://www.instagram.com/Instagram" target="_blank"> 
+                                    <i class="bi bi-instagram">   </i>
+                                </a>
+                                <p>
+                                    Instagram 
+                                </p>
+                            </li>
+                            <li class="contenedor-redes"> 
+                                <a href="https://www.linkedin.com" target="_blank"> 
+                                    <i class="bi bi-linkedin">    </i>
+                                </a>
+                                <p>
+                                    LinkedIn
+                                </p>
+                            </li>
+                            <li class="contenedor-redes"> 
+                                <a href="https://www.gmail.com" target="_blank"> 
+                                    <i class="bi bi-envelope-open"></i>
+                                </a>
+                                <p>
+                                    EMail
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="creditos-contacto">
+                            <h2>
+                            Créditos de esta página
+                            </h2>
+                            <strong>
+                                <p>Maitén Oviedo</p>
+                                <p>Mateo Garay</p>
+                            </strong>
+                        </div>
+    
+                    </div>
+                </div>
+                <div>
+                    <strong> 
+                        <h2 class="contacto-encabezado">Dejanos Tu Mensaje</h2>
+                    </strong>
+                    <form method="post" action="#" id="contact-form">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <br>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <label for="mensaje">Escriba su Mensaje Aquí</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="mensaje-enviado">
+                <h2>Mensaje enviado correctamente</h2>
+                <p>Gracias por contactarnos. Te responderemos lo antes posible.</p>
+            </div>
+        
+            <div id="mensaje-error">
+                <h2>Error al enviar el mensaje</h2>
+                <p>Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.</p>
+            </div>
+        </section>
     </body>
+    <hr><hr>
+    <footer>
+        <div class="footer-contenedor">
+            <div class="contacto-personal">
+                <div>
+                    <p>Contactar con Mateo</p>
+                </div>
+                <div>
+                    <a href="">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="">  
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href=""> 
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <img class="logo-footer" src="./Imagenes/logo2.jpg">
+            <div class="contacto-personal">
+                <div>
+                    <p>Contactar con Maitén</p>
+                </div>
+                <div>
+                    <a href="">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="">  
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href=""> 
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>
