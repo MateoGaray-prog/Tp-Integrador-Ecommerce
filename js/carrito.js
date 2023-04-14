@@ -3,6 +3,7 @@ productosEnCarrito = JSON.parse(productosEnCarrito);
 
 /*ELEMENTOS LLAMADOS DEL DOM*/
 
+const main = document.querySelector("#main");
 const contendorCarrito = document.querySelector("#contenedor-carrito");
 const tituloCarrito = document.querySelector("#titulo-carrito");
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
@@ -14,8 +15,12 @@ const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
 const header = document.querySelector("#header");
-const contenedorWizard1 = document.querySelector("#wizard-1");
-const contenedorWizard2 = document.querySelector("#wizard-2");
+
+// WIZARD
+
+const wizard = document.querySelector("#wizard");
+const grande = document.querySelector(".grande");
+const punto = document.querySelectorAll(".punto");
 const botonCancelar = document.querySelector("#boton-cancelar");
 const botonSiguiente = document.querySelector("#boton-siguiente");
 const botonAtras = document.querySelector("#boton-atras");
@@ -106,6 +111,13 @@ function actualizarTotal(){
     total.innerText = `$${totalCalculado}`;
 }
 
+
+
+//-------------------------------------------------------------Wizard ------------------------------------------
+
+
+
+
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
 
@@ -113,10 +125,11 @@ function comprarCarrito() {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     
     tituloCarrito.classList.add("disabled");
-
+    
     contendorCarrito.classList.add("disabled");
-
-    contenedorWizard1.classList.remove("disabled");
+    
+    main.classList.add("padding0");
+    wizard.classList.remove("disabled");
     
     header.classList.add("blur");
     header.classList.add("index");
@@ -129,11 +142,11 @@ function cancelarCompra () {
     
     contendorCarrito.classList.remove("disabled");
     
-    contenedorWizard1.classList.add("disabled");
-    
     header.classList.remove("blur");
     header.classList.remove("index");
     header.classList.remove("fixed");
+    main.classList.remove("padding0");
+    wizard.classList.add("disabled");
 }
 
 botonSiguiente.addEventListener("click", continuarCompra);
@@ -151,28 +164,39 @@ function continuarCompra () {
 
     } else {
 
-        contenedorWizard1.classList.add("disabled");
-        contenedorWizard2.classList.remove("disabled");
+        grande.style.transform = `translateX(-50%)`;
+        botonAtras.classList.remove("activo");
+        botonSiguiente.classList.add("activo");
 
     }
 }
 
-botonAtras.addEventListener("click", volverCompra);
-function volverCompra () {
-    contenedorWizard2.classList.add("disabled");
-    contenedorWizard1.classList.remove("disabled");
-}
+botonAtras.addEventListener("click", () => {
+    grande.style.transform = `translateX(0%)`;
+    botonAtras.classList.add("activo");
+        botonSiguiente.classList.remove("activo");
+})
 
-botonConfirmarCompra.addEventListener("click", ()=> {
+botonConfirmarCompra.addEventListener("click", (e)=> {
+    e.preventDefault();
     const textoCorreo = document.querySelector("#texto-correo");
     const spinner = document.querySelector("#spinner");
 
     textoCorreo.classList.add("disabled");
     spinner.classList.remove("disabled");
+    botonAtras.classList.add("ocultar");
+    botonConfirmarCompra.classList.add("ocultar");
 
     setTimeout(() => {
-        textoCorreo.classList.add("disabled");
-        spinner.classList.remove("disabled");
-    }, 3000);
+        contenedorWizard2.classList.add("disabled");
+        vaciarCarrito();
+        contenedorCarritoVacio.classList.add("disabled");
+        contenedorCarritoComprado.classList.remove("disabled");
+        contendorCarrito.classList.remove("disabled");
+        header.classList.remove("blur");
+        header.classList.remove("index");
+        header.classList.remove("fixed");
+        contenedorWizard2.setAttribute("animation", "backOutUp .7s ease");
+    }, 2000);
 
 })
