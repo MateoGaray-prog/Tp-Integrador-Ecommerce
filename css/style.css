@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 ul{
@@ -387,7 +388,7 @@ button[type="submit"] {
 
 .bi-instagram {
     font-size: 20px;
-    color: rgb(129, 42, 211);
+    color: rgb(211 42 167);
 }
 
 .bi-envelope-open{
@@ -400,5 +401,8 @@ button[type="submit"] {
     font-size: 20px;
     color: #196ac7;
 }
+
+
+
 
 
