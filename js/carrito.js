@@ -22,11 +22,10 @@ const wizard = document.querySelector("#wizard");
 const grande = document.querySelector(".grande");
 const punto = document.querySelectorAll(".punto");
 const botonCancelar = document.querySelector("#boton-cancelar");
+const botonCancelar2 = document.querySelector("#boton-cancelar-2");
 const botonSiguiente = document.querySelector("#boton-siguiente");
 const botonAtras = document.querySelector("#boton-atras");
 const botonConfirmarCompra = document.querySelector("#boton-confirmar-compra");
-
-
 
 function cargarproductosCarrito() {
     if (productosEnCarrito && productosEnCarrito.length > 0){
@@ -136,31 +135,30 @@ function comprarCarrito() {
     header.classList.add("fixed");
 }
 
-botonCancelar.addEventListener("click", cancelarCompra);
-function cancelarCompra () {
-    tituloCarrito.classList.remove("disabled");
-    
+
+function cancelar() {
+    wizard.classList.add("disabled");
     contendorCarrito.classList.remove("disabled");
+    tituloCarrito.classList.remove("disabled");
     
     header.classList.remove("blur");
     header.classList.remove("index");
     header.classList.remove("fixed");
     main.classList.remove("padding0");
-    wizard.classList.add("disabled");
 }
 
-botonSiguiente.addEventListener("click", continuarCompra);
-function continuarCompra () {
+botonCancelar.addEventListener("click", cancelar);
+botonCancelar2.addEventListener("click", cancelar);
 
-    const nombre = document.querySelector("#nombre").value;
-    const apellido = document.querySelector("#apellido").value;
-    const celular = document.querySelector("#celular").value;
-    const email = document.querySelector("#email").value;
-
+botonSiguiente.addEventListener("click", ()=>{
     if (nombre === "" || apellido === "" || celular === "" || email === "") {
         
         const alertaFormulario = document.querySelector("#alerta-formulario");
         alertaFormulario.classList.remove("disabled");
+
+        setTimeout(() => {
+            alertaFormulario.classList.add("disabled");   
+        }, 3000);
 
     } else {
 
@@ -169,34 +167,39 @@ function continuarCompra () {
         botonSiguiente.classList.add("activo");
 
     }
-}
+});
 
-botonAtras.addEventListener("click", () => {
+botonAtras.addEventListener("click", ()=>{
     grande.style.transform = `translateX(0%)`;
     botonAtras.classList.add("activo");
-        botonSiguiente.classList.remove("activo");
-})
+    botonSiguiente.classList.remove("activo");
+
+});
 
 botonConfirmarCompra.addEventListener("click", (e)=> {
     e.preventDefault();
-    const textoCorreo = document.querySelector("#texto-correo");
+    const textoCompra = document.querySelector("#texto-compra");
     const spinner = document.querySelector("#spinner");
 
-    textoCorreo.classList.add("disabled");
+    textoCompra.classList.add("disabled");
     spinner.classList.remove("disabled");
+    botonCancelar2.classList.add("disabled");
+    botonConfirmarCompra.classList.add("disabled");
     botonAtras.classList.add("ocultar");
-    botonConfirmarCompra.classList.add("ocultar");
+    botonSiguiente.classList.add("ocultar");
+    botonConfirmarCompra.classList.add("disabled");
+    botonCancelar2.classList.add("disabled");
 
     setTimeout(() => {
-        contenedorWizard2.classList.add("disabled");
-        vaciarCarrito();
-        contenedorCarritoVacio.classList.add("disabled");
-        contenedorCarritoComprado.classList.remove("disabled");
-        contendorCarrito.classList.remove("disabled");
+        wizard.classList.add("disabled");
         header.classList.remove("blur");
         header.classList.remove("index");
         header.classList.remove("fixed");
-        contenedorWizard2.setAttribute("animation", "backOutUp .7s ease");
+        main.classList.remove("padding0");
+        contendorCarrito.classList.remove("disabled");
+        tituloCarrito.classList.remove("disabled");
+        vaciarCarrito();
+        contenedorCarritoVacio.classList.add("disabled");
+        contenedorCarritoComprado.classList.remove("disabled");
     }, 2000);
-
 })
