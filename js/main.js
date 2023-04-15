@@ -2,6 +2,7 @@ const productos = [
     {
       id: "remera-01",
       titulo:"Remera-01",
+      imagen: "./Imagenes/remera-01.jpg",
       categorias:{
         nombre:"Remeras",
         id: "remeras",
@@ -12,6 +13,7 @@ const productos = [
     {
         id: "remera-02",
         titulo:"Remera-02",
+        imagen: "./Imagenes/remera-02.jpg",
         categorias:{
           nombre:"Remeras",
           id: "remeras",
@@ -22,6 +24,7 @@ const productos = [
     {
         id: "remera-03",
         titulo:"Remera-03",
+        imagen: "./Imagenes/remera-03.jpg",
         categorias:{
           nombre:"Remeras",
           id: "remeras",
@@ -32,6 +35,7 @@ const productos = [
     {
         id: "remera-04",
         titulo:"Remera-04",
+        imagen: "./Imagenes/remera-04.jpg",
         categorias:{
           nombre:"Remeras",
           id: "remeras",
@@ -42,6 +46,7 @@ const productos = [
     {
         id: "pantalon-01",
         titulo:"Pantalon-01",
+        imagen: "./Imagenes/pantalon-01.jpg",
         categorias:{
           nombre:"Pantalones",
           id: "pantalones",
@@ -52,6 +57,7 @@ const productos = [
     {
         id: "pantalon-02",
         titulo:"Pantalon-02",
+        imagen: "./Imagenes/pantalon-02.jpg",
         categorias:{
           nombre:"Pantalones",
           id: "pantalones",
@@ -62,6 +68,7 @@ const productos = [
     {
         id: "pantalon-03",
         titulo:"Pantalon-03",
+        imagen: "./Imagenes/pantalon-03.jpg",
         categorias:{
           nombre:"Pantalones",
           id: "pantalones",
@@ -72,6 +79,7 @@ const productos = [
     {
         id: "pantalon-04",
         titulo:"Pantalon-04",
+        imagen: "./Imagenes/pantalon-04.jpg",
         categorias:{
           nombre:"Pantalones",
           id: "pantalones",
@@ -82,6 +90,7 @@ const productos = [
     {
         id: "zapatilla-01",
         titulo:"Zapatilla-01",
+        imagen: "./Imagenes/zapatilla-01.jpg",
         categorias:{
           nombre:"Zapatillas",
           id: "zapatillas",
@@ -92,6 +101,7 @@ const productos = [
     {
         id: "zapatilla-02",
         titulo:"zapatilla-02",
+        imagen: "./Imagenes/zapatilla-02.jpg",
         categorias:{
           nombre:"Zapatillas",
           id: "zapatillas",
@@ -102,6 +112,7 @@ const productos = [
     {
         id: "zapatilla-03",
         titulo:"Zapatilla-03",
+        imagen: "./Imagenes/zapatilla-03.jpg",
         categorias:{
           nombre:"Zapatillas",
           id: "zapatillas",
@@ -112,6 +123,7 @@ const productos = [
     {
         id: "zapatilla-04",
         titulo:"Zapatilla-04",
+        imagen: "./Imagenes/zapatilla-04.jpg",
         categorias:{
           nombre:"Zapatillas",
           id: "zapatillas",
