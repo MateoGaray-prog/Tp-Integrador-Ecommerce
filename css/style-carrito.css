@@ -31,6 +31,9 @@ header {
     border-bottom: solid 2px #278fa1;
 }
 
+.nav a {
+    text-decoration: none;
+}
 .logo {
     display: flex;
 }
@@ -282,7 +285,7 @@ main {
 
 .padding0 {
     padding: 0;
-    padding-top: 200px;
+    padding-top: 150px;
     overflow: hidden;
 }
 
@@ -394,10 +397,15 @@ main {
     width: 100%;
     max-width: 120em;
     animation: backInUp .7s ease;
-    text-align: center;
 }
 
-.wizard .grande{
+.wizard h1 {
+    text-align: center;
+    color: #278fa1;
+    font-size: 2.3em;
+}
+
+.grande{
     width: 200%;
     display: flex;
     flex-flow: row nowrap;
@@ -405,9 +413,10 @@ main {
     align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
+    overflow-x: hidden;
 }
 
-.wizard div {
+.separado{
     width: calc(100% / 2);
 }
 
@@ -427,74 +436,188 @@ main {
     height: 1em;
     margin: 1em;
     font-size: 20px;
-    border: solid 1px #444;
+    border: solid 1px #000;
     cursor: pointer;
 }
 
+.wizard .punto:hover {
+    border: solid 1px #278fa1;
+    transition: all .2s;
+}
+
 .activo{
-    background-color: #278fa1;
+    background-color: #66bece;
 }
 
-/*Wizard Diseño*/
+/*WIZARD 1  */
 
-.wizard-1-container,
-.wizard-2-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-}
-
-.wizard-1-form,
-.wizard-2-form {
-    height: 40vh;
-    background-color: #666;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-}
-
-.wizard-1-form p,
-.wizard-1-form p {
+.wizard-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
-    padding-top: .7em;
 }
 
-.wizard-1-form p input,
-.wizard-1-form p input{
-    width: max-content;
-    height: 2.3em;
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: solid 1px #278fa1;
-    color: #fff;
-    font-size: 1em;
+.wizard-1-form{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
-.boton-cancelar,
-.boton-confirmar-compra{
-    font-size: 1.2em;
-    background-color: #278fa1;
-    color: #fff;
-    border: none;
-    padding: .3em;
-    margin: .3em;
-    cursor: pointer;
-    border-radius: .3em;
+.boton-cancelar-container{
+    display: flex;
+    justify-content: flex-end;
 }
 
-.boton-cancelar:hover,
-.boton-confirmar-compra:hover{
-    background-color: #33abc0;
+.boton-cancelar {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    padding: 1em 1em 0 0;
+    font-size: 1.3em;
+    cursor: pointer;
 }
+
+.boton-cancelar:hover {
+    color: #40b7cc;
+    transition: all .3s;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.inputs-container-1 ,
+.inputs-container-2 {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.inputs-container-1 p,
+.inputs-container-2 p{
+    display: flex;
+    margin: 0 2em 1em 2em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+}
+
+
+.inputs-container-1 label,
+.inputs-container-2 label{
+    color: #000;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+.inputs-container-1 input,
+.inputs-container-2 input{
+    width: 100%;
+    background: none;
+    color: #000;
+    outline: none;
+    font-size: 1.1em;
+    border: 0;
+    border-bottom: solid 1px #555;
+}
+
+.inputs-container-1 input:hover,
+.inputs-container-2 input:hover{
+    border-bottom: solid 1px #278fa1;
+    transition: all .3s;
+}
+
+
+.disabled {
+    display: none;
+}
+
+/*WIZARD 2*/
+
+.wizard-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.boton-confirmar-compra {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px #000;
+    font-size: 1.1em;
+    padding: .2em;
+    text-transform: uppercase;
+    margin: 0 1em 1em 1em;
+    cursor: pointer;
+}
+
+.boton-confirmar-compra:hover {
+    color: #fff;
+    background-color: #278fa1;
+    border: none;
+    transition: all .3s;
+}
+
+.texto-compra {
+    font-size: 1.5em;
+    margin: 3em 3em;
+}
+
+.spinner {
+    margin: 8em 14em;
+    width: 70px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #444;
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
 /*--------------------------------------------------------------------------------------------*/
 
 .disabled {
@@ -547,23 +670,23 @@ main {
     animation-name: backInUp;
   }
 
-@keyframes backOutUp {
+@keyframes backOutDown {
     0% {
-        transform: scale(1);
-        opacity: 1;
+      transform: scale(1);
+      opacity: 1;
     }
-
+  
     20% {
-        transform: translateY(0px) scale(0.7);
-        opacity: 0.7;
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
     }
-
+  
     100% {
-        transform: translateY(-700px) scale(0.7);
-        opacity: 0.7;
+      transform: translateY(700px) scale(0.7);
+      opacity: 0.7;
     }
-    }
-
-    .backOutUp {
-    animation-name: backOutUp;
-    }
+  }
+  
+  .backOutDown {
+    animation-name: backOutDown;
+  }
