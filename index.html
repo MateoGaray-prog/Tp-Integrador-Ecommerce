@@ -16,10 +16,12 @@
         <header>
 
             <div class="nav">
-                <nav class="logo">
-                    <img src="./Imagenes/logo2.jpg" alt="Logo">
-                    <h1>Nine <br> Urban</h1>
-                </nav>
+                <a class="nombre-estilo" href="./index.html">
+                    <nav class="logo">
+                        <img src="./Imagenes/logo2.jpg" alt="Logo">
+                        <h1>Nine <br> Urban</h1>
+                    </nav>     
+                </a>
                 <ul class="menu">
                     <li>
                         <a href="#home">Home</a>
@@ -150,34 +152,34 @@
                             <li class="contenedor-redes"> 
                                 <a href="https://www.facebook.com" target="_blank">
                                     <i class="bi bi-facebook">  </i>
-                                    <p>
-                                        FaceBook
-                                    </p>
                                 </a>
+                                <p>
+                                    FaceBook
+                                </p>
                             </li>
                             <li class="contenedor-redes"> 
                                 <a href="https://www.instagram.com/Instagram" target="_blank"> 
-                                    <i class="bi bi-instagram"></i>
-                                    <p>
-                                        Instagram 
-                                    </p>
+                                    <i class="bi bi-instagram">   </i>
                                 </a>
+                                <p>
+                                    Instagram 
+                                </p>
                             </li>
                             <li class="contenedor-redes"> 
                                 <a href="https://www.linkedin.com" target="_blank"> 
                                     <i class="bi bi-linkedin">    </i>
-                                    <p>
-                                        LinkedIn
-                                    </p>
                                 </a>
+                                <p>
+                                    LinkedIn
+                                </p>
                             </li>
                             <li class="contenedor-redes"> 
                                 <a href="https://www.gmail.com" target="_blank"> 
                                     <i class="bi bi-envelope-open"></i>
-                                    <p>
-                                        EMail
-                                    </p>
                                 </a>
+                                <p>
+                                    EMail
+                                </p>
                             </li>
                         </ul>
                         <div class="creditos-contacto">
@@ -185,7 +187,9 @@
                             Créditos de esta página
                             </h2>
                             <strong>
+                                <br>
                                 <p>Maitén Oviedo</p>
+                                <br>
                                 <p>Mateo Garay</p>
                             </strong>
                         </div>
@@ -199,15 +203,15 @@
                     <form id="form">
                         <div class="field">
                           <label for="from_name">Nombre</label>
-                          <input type="text" name="from_name" id="from_name">
+                          <input type="text" name="from_name" id="from_name" required>
                         </div>
                         <div class="field">
-                          <label for="message">Escribe tu mensaje aquí</label>
-                          <input type="text" name="message" id="message">
+                          <label for="message">Escriba su mensaje aqui</label>
+                          <input type="text" name="message" id="message" required>
                         </div>
                         <div class="field">
                           <label for="reply_to">Email</label>
-                          <input type="text" name="reply_to" id="reply_to">
+                          <input type="text" name="reply_to" id="reply_to" required>
                         </div>
                       
                         <input class="boton-enviar-mensaje" type="submit" id="button" value="Enviar" >
@@ -258,6 +262,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script type="text/javascript">
-        emailjs.init('MTpGu4Y-v2DHvTHto')
+         emailjs.init('MTpGu4Y-v2DHvTHto')
     </script>
 </html>
