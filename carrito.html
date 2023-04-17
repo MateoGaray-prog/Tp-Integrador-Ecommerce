@@ -77,28 +77,27 @@
                             </div>
                             <div id="form" class="inputs-container">
                                 <div class="inputs-container-1">
-                                  <div class="field">
-                                    <label for="nombre">nombre</label>
-                                    <input type="text" autocomplete="off" name="nombre" id="nombre">
-                                  </div>
-                                  <div class="field">
-                                    <label for="apellido">apellido</label>
-                                    <input type="text" autocomplete="off" name="apellido" id="apellido">
-                                  </div>
+                                  <p class="field">
+                                    <label for="nombre">Nombre</label>
+                                    <input required type="text" autocomplete="off" name="nombre" id="nombre">
+                                  </p>
+                                  <p class="field">
+                                    <label for="apellido">Apellido</label>
+                                    <input required type="text" autocomplete="off" name="apellido" id="apellido">
+                                  </p>
                                 </div>
                                 <div class="inputs-container-2">
-                                  <div class="field">
-                                    <label for="celular">celular</label>
-                                    <input type="text" autocomplete="off" name="celular" id="celular">
-                                  </div>
-                                  <div class="field">
-                                    <label for="email">email</label>
-                                    <input type="text" autocomplete="off" name="email" id="email">
-                                  </div>
+                                  <p class="field">
+                                    <label for="celular">Celular</label>
+                                    <input required type="text" autocomplete="off" name="celular" id="celular">
+                                  </p>
+                                  <p class="field">
+                                    <label for="email">Email</label>
+                                    <input required type="text" autocomplete="off" name="email" id="email">
+                                  </p>
                                 </div>
                             </div>
                         </div>
-                        <p id="alerta-formulario" class="alerta-formulario disabled"> Debes completar el formulario</p>
                     </div>
                 </div>
                 <div class="separado">
@@ -118,15 +117,20 @@
                                 <p id="texto-compra" class="texto-compra">Estas a punto de confirmar la compra.</p>
                             </p>
                             <p>
-                                <input type="submit" id="button" value="Send Email" >
+                                <input type="submit" class="boton-confirmar-compra" id="button" value="CONFIRMAR COMPRA" >
                             </p>
                         </form>
                     </div>
                 </div>
             </form>
             <ul class="puntos">
-                <button id="boton-atras" class="punto activo" type="button"></button>
-                <button id="boton-siguiente" class="punto" type="submit"></button>
+                <div>
+                    <button id="boton-atras" class="punto activo" type="button"></button>
+                    <button id="boton-siguiente" class="punto" type="submit"></button>
+                </div>
+                <div>
+                    <p id="alerta-formulario" class="alerta-formulario disabled"> Debes completar el formulario</p>
+                </div>
             </ul>
         </section>
     </main>
