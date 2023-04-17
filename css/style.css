@@ -286,13 +286,14 @@ label {
 
 input[type="text"],
 input[type="email"],
-textarea {
+input[type="textarea"] {
     width: 500px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
 }
+
 input[type="text"]:hover,:focus,
 input[type="email"]:hover,:focus,
 textarea:hover,:focus{
@@ -309,28 +310,20 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-#mensaje-enviado,
-#mensaje-error {
-    display: none;
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
+.boton-enviar-mensaje {
+    border: 0;
+    border-bottom: solid 1px #000;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all .3s ease;
 }
 
-#mensaje-enviado {
-    background-color: #e6ffe6;
-    border: 1px solid #99ff99;
-    color: #006600;
+.boton-enviar-mensaje:hover {
+    background-color: #278fa1;
+    color: #fff;
+    border: 0;
+    padding: .3em;
 }
-
-#mensaje-error {
-    background-color: #ffe6e6;
-    border: 1px solid #ff9999;
-    color: #990000;
-}
-
 
 /*-------------------------------------------Footer----------------------------*/
 
@@ -401,6 +394,9 @@ button[type="submit"] {
     font-size: 20px;
     color: #196ac7;
 }
+
+
+
 
 
 
