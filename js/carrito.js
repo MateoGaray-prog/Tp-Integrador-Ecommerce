@@ -25,6 +25,7 @@ const botonCancelar = document.querySelector("#boton-cancelar");
 const botonCancelar2 = document.querySelector("#boton-cancelar-2");
 const botonSiguiente = document.querySelector("#boton-siguiente");
 const botonAtras = document.querySelector("#boton-atras");
+const botonConfirmarCompra = document.querySelector("#boton-confirmar-compra");
 
 function cargarproductosCarrito() {
     if (productosEnCarrito && productosEnCarrito.length > 0){
@@ -150,6 +151,11 @@ botonCancelar.addEventListener("click", cancelar);
 botonCancelar2.addEventListener("click", cancelar);
 
 botonSiguiente.addEventListener("click", ()=>{
+    const nombre = document.querySelector("#nombre").value;
+    const apellido = document.querySelector("#apellido").value;
+    const celular = document.querySelector("#celular").value;
+    const email = document.querySelector("#email").value;
+
     if (nombre === "" || apellido === "" || celular === "" || email === "") {
         
         const alertaFormulario = document.querySelector("#alerta-formulario");
@@ -175,8 +181,7 @@ botonAtras.addEventListener("click", ()=>{
 
 });
 
-/*
-
+/* 
 botonConfirmarCompra.addEventListener("click", (e)=> {
     e.preventDefault();
     const textoCompra = document.querySelector("#texto-compra");
@@ -212,17 +217,35 @@ document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.classList.add("disabled"); 
 
    const serviceID = 'default_service';
    const templateID = 'template_qpml0ck';
+   const textoCompra = document.querySelector("#texto-compra");
+   const spinner = document.querySelector("#spinner");
+
+    textoCompra.classList.add("disabled");
+    spinner.classList.remove("disabled");
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+         
+        spinner.classList.remove("disabled");
+          
+        setTimeout(() => {
+            header.classList.remove("blur");
+            header.classList.remove("index");
+            header.classList.remove("fixed");
+            main.classList.remove("padding0");
+            contendorCarrito.classList.remove("disabled");
+            tituloCarrito.classList.remove("disabled");
+            vaciarCarrito();
+            contenedorCarritoVacio.classList.add("disabled");
+            contenedorCarritoComprado.classList.remove("disabled");
+            wizard.classList.add("opacity");
+        }, 1000);
     }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
+      btn.value = 'REINTENTAR COMPRA';
+        alert(JSON.stringify(err));
     });
 });
