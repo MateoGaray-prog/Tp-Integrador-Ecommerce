@@ -362,8 +362,13 @@ button[type="submit"] {
     text-align: center;
 }
 
-.contenedor-redes p{
+.contenedor-redes a {
+    align-items: center;
+}
+
+.contenedor-redes a p{
     font-family: 'Heebo', sans-serif;
+    margin-left: .5em;
 }
 
 /*-------------------------------------------GENERAL----------------------------*/
@@ -394,11 +399,3 @@ button[type="submit"] {
     font-size: 20px;
     color: #196ac7;
 }
-
-
-
-
-
-
-
-
