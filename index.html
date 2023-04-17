@@ -196,29 +196,23 @@
                     <strong> 
                         <h2 class="contacto-encabezado">Dejanos Tu Mensaje</h2>
                     </strong>
-                    <form method="post" action="#" id="contact-form">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <br>
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-                        <label for="mensaje">Escriba su Mensaje Aquí</label>
-                        <textarea id="mensaje" name="mensaje" required></textarea>
-                        <br>
-                        <button type="submit">Enviar</button>
-                    </form>
+                    <form id="form">
+                        <div class="field">
+                          <label for="from_name">Nombre</label>
+                          <input type="text" name="from_name" id="from_name" required>
+                        </div>
+                        <div class="field">
+                          <label for="message">Escriba su mensaje aqui</label>
+                          <input type="text" name="message" id="message" required>
+                        </div>
+                        <div class="field">
+                          <label for="reply_to">Email</label>
+                          <input type="text" name="reply_to" id="reply_to" required>
+                        </div>
+                      
+                        <input class="boton-enviar-mensaje" type="submit" id="button" value="Enviar" >
+                      </form>
                 </div>
-            </div>
-    
-            <div id="mensaje-enviado">
-                <h2>Mensaje enviado correctamente</h2>
-                <p>Gracias por contactarnos. Te responderemos lo antes posible.</p>
-            </div>
-        
-            <div id="mensaje-error">
-                <h2>Error al enviar el mensaje</h2>
-                <p>Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.</p>
             </div>
         </section>
     </body>
@@ -260,4 +254,10 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+         emailjs.init('MTpGu4Y-v2DHvTHto')
+    </script>
 </html>
