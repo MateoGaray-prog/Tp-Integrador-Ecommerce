@@ -25,7 +25,6 @@ const botonCancelar = document.querySelector("#boton-cancelar");
 const botonCancelar2 = document.querySelector("#boton-cancelar-2");
 const botonSiguiente = document.querySelector("#boton-siguiente");
 const botonAtras = document.querySelector("#boton-atras");
-const botonConfirmarCompra = document.querySelector("#boton-confirmar-compra");
 
 function cargarproductosCarrito() {
     if (productosEnCarrito && productosEnCarrito.length > 0){
@@ -176,6 +175,8 @@ botonAtras.addEventListener("click", ()=>{
 
 });
 
+/*
+
 botonConfirmarCompra.addEventListener("click", (e)=> {
     e.preventDefault();
     const textoCompra = document.querySelector("#texto-compra");
@@ -202,4 +203,26 @@ botonConfirmarCompra.addEventListener("click", (e)=> {
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoComprado.classList.remove("disabled");
     }, 2000);
-})
+    
+})*/
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_qpml0ck';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
