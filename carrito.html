@@ -66,38 +66,38 @@
         </div>
         <section id="wizard" class="wizard disabled">
             <h1>COMPRA</h1>
-            <div class="grande">
+            <form id="form" class="grande">
                 <div class="separado">
                     <div id="wizard-1" class="wizard-1">
-                        <form id="wizard-1" class="wizard-1-form" >
+                        <div id="wizard-1" class="wizard-1-form" >
                             <div class="boton-cancelar-container">
                                 <button id="boton-cancelar" type="button" class="boton-cancelar">
                                     <i class="bi bi-x-lg"></i>
                                 </button>
                             </div>
-                            <div class="inputs-container">
+                            <div id="form" class="inputs-container">
                                 <div class="inputs-container-1">
-                                    <p>
-                                        <label>Nombre</label>
-                                        <input type="text" id="nombre" autocomplete="off" name="nombre" required>
-                                    </p>
-                                    <p>
-                                        <label>Apellido</label>
-                                        <input type="text" id="apellido" autocomplete="off" name="apellido" required>
-                                    </p>
+                                  <div class="field">
+                                    <label for="nombre">nombre</label>
+                                    <input type="text" autocomplete="off" name="nombre" id="nombre">
+                                  </div>
+                                  <div class="field">
+                                    <label for="apellido">apellido</label>
+                                    <input type="text" autocomplete="off" name="apellido" id="apellido">
+                                  </div>
                                 </div>
                                 <div class="inputs-container-2">
-                                    <p>
-                                        <label>Celular</label>
-                                        <input type="tel" id="celular" autocomplete="off" required>
-                                    </p>
-                                    <p>
-                                        <label>E-Mail</label>
-                                        <input type="email" id="email" autocomplete="off" name="email" required>
-                                    </p>
+                                  <div class="field">
+                                    <label for="celular">celular</label>
+                                    <input type="text" autocomplete="off" name="celular" id="celular">
+                                  </div>
+                                  <div class="field">
+                                    <label for="email">email</label>
+                                    <input type="text" autocomplete="off" name="email" id="email">
+                                  </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                         <p id="alerta-formulario" class="alerta-formulario disabled"> Debes completar el formulario</p>
                     </div>
                 </div>
@@ -118,12 +118,12 @@
                                 <p id="texto-compra" class="texto-compra">Estas a punto de confirmar la compra.</p>
                             </p>
                             <p>
-                                <button id="boton-confirmar-compra" class="boton-confirmar-compra" type="button">Confirmar compra</button>
+                                <input type="submit" id="button" value="Send Email" >
                             </p>
                         </form>
                     </div>
                 </div>
-            </div>
+            </form>
             <ul class="puntos">
                 <button id="boton-atras" class="punto activo" type="button"></button>
                 <button id="boton-siguiente" class="punto" type="submit"></button>
@@ -131,5 +131,11 @@
         </section>
     </main>
     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('MTpGu4Y-v2DHvTHto')
+    </script>
+
 </body>
 </html>
