@@ -33,6 +33,10 @@ header {
     list-style: none;
 }
 
+.nombre-estilo:focus{
+    background-color: #000;
+}
+
 .logo-a{
     text-decoration: none;
 }
